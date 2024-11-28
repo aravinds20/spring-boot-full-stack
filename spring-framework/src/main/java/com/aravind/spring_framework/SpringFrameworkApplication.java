@@ -1,13 +1,9 @@
 package com.aravind.spring_framework;
 
 import com.aravind.spring_framework.configuration.HellowWorldConfiguraiton;
-import com.aravind.spring_framework.model.Game;
-import com.aravind.spring_framework.model.GameRunner;
-import com.aravind.spring_framework.model.SuperContra;
-import com.aravind.spring_framework.model.SuperMario;
-import org.springframework.boot.SpringApplication;
+import com.aravind.spring_framework.configuration.Person;
+import com.aravind.spring_framework.configuration.Address;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @SpringBootApplication
@@ -22,9 +18,15 @@ public class SpringFrameworkApplication {
 		System.out.println(name);
 
 		System.out.println(context.getBean("age"));
-		System.out.println(context.getBean("person2"));
 		System.out.println(context.getBean("address"));
-		System.out.println(context.getBean("personWithParam"));
+		System.out.println(context.getBean("person"));
+		System.out.println(context.getBean("person2"));
+		System.out.println(context.getBean("person3Param"));
+
+		System.out.println(context.getBean("person4Param"));
+
+		System.out.println(context.getBean(Person.class));
+		System.out.println(context.getBean(Address.class));
 
 //		Game game = new SuperContra();
 //		GameRunner gameRunner = new GameRunner(game);
